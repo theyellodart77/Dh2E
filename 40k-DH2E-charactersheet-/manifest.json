@@ -1,0 +1,41 @@
+{
+  "manifestVersion": 1,
+  "name": "40k - Dark Heresey 2E - character sheet",
+  "summary": "A character sheet to play W40k Dark Heresey 2E",
+  "descriptionFilePath": "/README.md",
+  "version": "1.0",
+  "license": "MIT",
+  "about": {
+    "authors": ["Pierre CHARDAT-Edited By Ben A"]
+  },
+  "kind": "webView",
+  "entryPoint": "/character_sheet.html",
+  "api": {
+    "version": "0.1",
+    "initTimeout": 10,
+    "subscriptions": {
+      "dice": {
+        "onRollResults": "handleRollResult"
+      },
+      "symbiote": {
+        "onVisibilityEvent": "includeHTML",
+        "onStateChangeEvent": "onStateChangeEvent"
+      }
+    },
+    "interop": {
+      "id": "DH2Ev1"
+    }
+  },
+  "environment": {
+    "capabilities": [
+      "playAudio"
+    ],
+    "extras": [
+      "diceFinder",
+      "icons",
+      "fonts",
+      "colorStyles"
+    ],
+    "webViewBackgroundColor": "#000"
+  }
+}
