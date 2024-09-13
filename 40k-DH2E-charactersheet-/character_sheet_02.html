@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>40K - DH2E - Character Sheet</title>
+    <link rel="stylesheet" href="character_sheet.css">
+    <script src="character_sheet.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CHARACTER BACKGROUND -->
+    <div class="container">
+        <div class="content-row">
+            <input id="character-name" placeholder="Character name" type="text" class="field-data"></input>
+        </div>
+        <div class="content-row">
+            <input id="archetype" placeholder="Archetype" type="text" class="field-data"></input>
+            <input id="specie" placeholder="Specie" type="text" class="field-data"></input>
+        </div>
+        <div class="content-row">
+            <input id="tier" placeholder="Tier" type="number" class="field-data"></input>
+            <input id="rank" placeholder="Rank" type="number" class="field-data"></input>
+            <input id="exp" placeholder="Experience" type="number" class="field-data"></input>
+        </div>
+        <div class="content-row">
+            <input id="key-words" placeholder="Keywords" type="text" class="field-data"></input>
+
+        </div>
+    </div>
+
+    <!-- CHARACTER STATS -->
+    <div class="stats">
+        <div class="container columns one">
+            <!-- ATTRIBUTES -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="4" class="table-title">
+                            <h1>Characteristics</h1>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="1">Characteristic</th>
+                        <th colspan="1">Score</th>
+                        <th colspan="1">Modifier</th>
+                        <!-- <th colspan="1">Notes</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="strength">Weapon Skill -WS- </label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="str" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="strEnhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="strength">Ballistic Skill -BS-</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="str" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="strEnhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="strength">Strength</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="str" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="strEnhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Toughness">Toughness</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="tou" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="tou-enhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Agility">Agility</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="agi" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="agi-enhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Initiative">Intelligence</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="ini" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="ini-enhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Willpower">Perception</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="wil" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="wil-enhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Intellect">Willpower</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="int" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="int-enhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Fellowship">Fellowship</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="fel" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="fel-enhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="strength">Influence</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="str" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="strEnhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Aptitudes -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="4" class="table-title">
+                            <h1>Aptitudes</h1>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Defence">Agility</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="defence" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Resilience">Ballistic Skill</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="resilience" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Determination">Defense</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="determination" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr id="wounds-container">
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Max-Wounds">Fellowship</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="max-wounds" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr id="shock-container">
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Max-Shock">Fieldcraft</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="max-shock" type="number" class="field-data-short"></input>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Speed">Finesse</label>
+
+                        </td>
+                        <td class="input-bg">
+                            <input id="speed" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Conviction">General</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="conviction" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Resolve">Intelligence</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="resolve" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Corruption">Knowledge
+                            </label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="corruption " type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Passive-Awareness">Leadership</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="passive-awareness" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Influence">Offense</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="Influence" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Wealth">Perception</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="wealth" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Defence">Psyker</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="defence" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Defence">Social</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="defence" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Defence">Strength</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="defence" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Defence">Tech</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="defence" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Defence">Toughness</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="defence" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Defence">Weapon Skill</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="defence" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Defence">Willpower</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="defence" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Armour -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="4" class="table-title">
+                            <h1>Armour</h1>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="1">Body Part</th>
+                        <th colspan="1">Score</th>
+                        <th colspan="1">Total</th>
+                        <!-- <th colspan="1">Notes</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="strength">Head</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="str" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="strEnhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="strength">Right Arm</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="str" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="strEnhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="strength">Left Arm</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="str" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="strEnhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Toughness">Body</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="tou" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="tou-enhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Agility">Right Leg</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="agi" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="agi-enhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Initiative">Left Leg</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="ini" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="ini-enhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <!-- Armour -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="4" class="table-title">
+                            <h1>Misc</h1>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="1">Description</th>
+                        <th colspan="1">Score</th>
+                        <th colspan="1">Total  -or modifier-</th>
+                        <!-- <th colspan="1">Notes</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="strength">Total Wounds</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="str" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="strEnhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="strength">Insanity</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="str" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="strEnhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="strength">Corruption</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="str" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="strEnhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Toughness">Fate</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="tou" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="tou-enhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Agility">Right Leg</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="agi" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="agi-enhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="field-title" data-dice-type="1d6" data-modifier="no-mod"
+                                data-label="Initiative">Left Leg</label>
+                        </td>
+                        <td class="input-bg">
+                            <input id="ini" type="number" class="field-data-short"></input>
+                        </td>
+                        <td class="input-bg">
+                            <input id="ini-enhanced" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+
+
+
+
+
+        </div>
+        <div class="container columns two">
+            <!-- SKILLS -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="4" class="table-title">
+                            <h1>Skills</h1>
+
+                            <div class="container content-row">
+                                <p style="margin: auto;font-weight: bold;">Wrath ?</p>
+                                <input id="wrath" type="checkbox"></input>
+                            </div>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="1">Skill</th>
+                        <th colspan="1">Rating</th>
+                        <th colspan="1">Att</th>
+                        <th colspan="1">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="athRoll" type="button"
+                                onclick="roll(athRoll,athTotal)">Acrobadics</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="ath" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="ath-att">Ag</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="athTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="athRoll" type="button"
+                                onclick="roll(athRoll,athTotal)">Athletics</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="ath" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="ath-att">Str</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="athTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="awaRoll" type="button"
+                                onclick="roll(awaRoll,awaTotal)">Awareness</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="awa" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="awa-att">Int</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="awaTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="bsRoll" type="button" onclick="roll(bsRoll,bsTotal)">Charm</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="bs" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="bs-att">Fel</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="bsTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="cunRoll" type="button"
+                                onclick="roll(cunRoll,cunTotal)">Command</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="cun" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="cun-att">Fel</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="cunTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="cunRoll" type="button"
+                                onclick="roll(cunRoll,cunTotal)">Commerce</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="cun" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="cun-att">Int</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="cunTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="cunRoll" type="button"
+                                onclick="roll(cunRoll,cunTotal)">Common Lore</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="cun" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="cun-att">Int</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="cunTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="decRoll" type="button"
+                                onclick="roll(decRoll,decTotal)">Deception</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="dec" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="dec-att">Fel</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="decTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="decRoll" type="button"
+                                onclick="roll(decRoll,decTotal)">Dodge</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="dec" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="dec-att">Agi</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="decTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="decRoll" type="button"
+                                onclick="roll(decRoll,decTotal)">Forbidden Lore</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="dec" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="dec-att">Int</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="decTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="insRoll" type="button"
+                                onclick="roll(insRoll,insTotal)">Inquiry</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="ins" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="ins-att">Fel</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="insTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="decRoll" type="button"
+                                onclick="roll(decRoll,decTotal)">Interrogation</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="dec" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="dec-att">Wil</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="decTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="intiRoll" type="button"
+                                onclick="roll(intiRoll,intiTotal)">Intimidation</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="int" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="inti-att">Wil</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="intiTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="invRoll" type="button"
+                                onclick="roll(invRoll,invTotal)">Linguistics</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="inv" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="inv-att">Int</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="invTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="decRoll" type="button"
+                                onclick="roll(decRoll,decTotal)">Logic</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="dec" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="dec-att">Int</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="decTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="medRoll" type="button"
+                                onclick="roll(medRoll,medTotal)">Medicae</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="med" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="med-att">Int</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="medTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="decRoll" type="button"
+                                onclick="roll(decRoll,decTotal)">Navigate -Surface-</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="dec" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="dec-att">Int</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="decTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="decRoll" type="button"
+                                onclick="roll(decRoll,decTotal)">Navigate -Stellar-</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="dec" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="dec-att">Int</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="decTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="decRoll" type="button"
+                                onclick="roll(decRoll,decTotal)">Navigate -Warp-</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="dec" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="dec-att">Int</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="decTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="perRoll" type="button"
+                                onclick="roll(perRoll,perTotal)">Operate -Aeronautical-</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="per" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="per-att">Agi</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="perTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="perRoll" type="button"
+                                onclick="roll(perRoll,perTotal)">Operate -Surface-</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="per" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="per-att">Agi</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="perTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr></tr>
+                        <td>
+                            <button class="cell-data" id="perRoll" type="button"
+                                onclick="roll(perRoll,perTotal)">Operate -Voidship-</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="per" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="per-att">Agi</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="perTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="pilRoll" type="button"
+                                onclick="roll(pilRoll,pilTotal)">Parry</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="pil" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="pil-att">WS</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="pilTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="pmRoll" type="button" onclick="roll(pmRoll,pmTotal)">Psyniscience</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="pm" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="pm-att">Per</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="pmTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="schRoll" type="button"
+                                onclick="roll(schRoll,schTotal)">Scholastic Lore</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="sch" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="sch-att">Int</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="schTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="perRoll" type="button"
+                                onclick="roll(perRoll,perTotal)">Scrutiny</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="per" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="per-att">Per</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="perTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="perRoll" type="button"
+                                onclick="roll(perRoll,perTotal)">Scrutiny</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="per" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="per-att">Int</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="perTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="perRoll" type="button"
+                                onclick="roll(perRoll,perTotal)">Sleight of Hand</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="per" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="per-att">Agi</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="perTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="steRoll" type="button"
+                                onclick="roll(steRoll,steTotal)">Stealth</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="ste" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="ste-att">Agi</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="steTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="perRoll" type="button"
+                                onclick="roll(perRoll,perTotal)">Survival</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="per" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="per-att">Per</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="perTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="tecRoll" type="button"
+                                onclick="roll(tecRoll,tecTotal)">Tech Use</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="tec" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="tec-att">Int</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="tecTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cell-data" id="wsRoll" type="button" onclick="roll(wsRoll,wsTotal)">Trade</button>
+                        </td>
+                        <td class="input-bg">
+                            <input id="ws" type="number" class="field-data-short"></input>
+                        </td>
+                        <td>
+                            <p id="ws-att">Int</p>
+                        </td>
+                        <td class="input-bg">
+                            <input id="wsTotal" type="number" class="field-data-short"></input>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="tabs">
+        <div class="tab-registers notes">
+            <button id="weapon-tab" class="tab active-tab">Weapons</button>
+            <button id="wargear-tab" class="tab">Wargear</button>
+            <button id="abilities-tab" class="tab">Abilities</button>
+            <button id="description-tab" class="tab">Description</button>
+        </div>
+        <div class="tab-bodies">
+            <div style="display:block;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th style="width:29%" colspan="1">Name</th>
+                            <th style="width:14%" colspan="1">Range</th>
+                            <th style="width:19%" colspan="1">Damage</th>
+                            <th style="width:5%" colspan="1">AP</th>
+                            <th style="width:6%" colspan="1">Clip</th>
+                            <th style="width:24%" colspan="1">Traits</th>
+                        </tr>
+                    </thead>
+                </table>
+
+                <!-- handle our weapons creation -->
+                <div class="columns">
+                    <template id="abilities-template">
+                        <tr>
+                            <td style="width:29%">
+                                <label id="abilities-template-title" class="ability-title weapon-size">Action
+                                    Title</label>
+                            </td>
+                            <td style="width:14%">
+                                <div id="abilities-template-range" class="ability-desc weapon-size">Range</div>
+                            </td>
+                            <td style="width:19%">
+                                <button id="abilities-template-button" data-modifier="no-mod" data-dice-type=""
+                                    data-label="" class=""><i class="ts-icon-sword-crossed ts-icon-small"
+                                        style="margin-right: 0.2em;"></i>Roll Damage</button>
+                            </td>
+                            <td style="width:5%">
+                                <div id="abilities-template-ap" class="ability-desc weapon-size">AP</div>
+                            </td>
+                            <td style="width:6%">
+                                <div id="abilities-template-salvo" class="ability-desc weapon-size">Clip</div>
+                            </td>
+                            <td style="width:24%">
+                                <p id="abilities-template-traits" class="ability-desc weapon-size">Action description
+                                </p>
+                            </td>
+                        </tr>
+                    </template>
+
+
+                    <div id="arsenal" class="content-row" style="margin-bottom: 0; display:none;">
+                        <textarea id="abilities-text" aria-labelledby="abilities-section" placeholder="name;range;diceAndModifier;armourPenetration;salvo;description Chainsword;melee;4d6+9;1;-;Brutal,Parade                                                  Bolter;12 24 36;1d6+10;1;2;Brutal,TirRapide"></textarea>
+                    </div>
+                    <button onclick="hideShow(arsenal)" class="notes">Arsenal</button>
+                </div>
+                
+
+
+                <container class="content-row">
+                    <h3>Reloads :</h3>
+                    <input id="ammo-1" type="checkbox" />
+                    <input id="ammo-2" type="checkbox" />
+                    <input id="ammo-3" type="checkbox" />
+                </container>
+
+                <textarea id="weapon-traits" class="notes" placeholder="Weapons Traits Description"></textarea>
+            </div>
+            <div style="display:none;">
+                <textarea id="wargear" class="notes" style="margin-top: 0;"></textarea>
+            </div>
+            <div style="display:none;">
+                <h2>Species</h2>
+                <textarea id="species" class="notes" style="margin-top: 0;"
+                    placeholder="No abilities? Human eh?"></textarea>
+                <h2>Archetype</h2>
+                <textarea id="archetype" class="notes" style="margin-top: 0;"></textarea>
+                <h2>Ascension</h2>
+                <textarea id="ascension" class="notes" style="margin-top: 0;"></textarea>
+                <h2>Talents</h2>
+                <textarea id="talents" class="notes" style="margin-top: 0;"></textarea>
+                <h2>Others</h2>
+                <textarea id="others" class="notes" style="margin-top: 0;"></textarea>
+            </div>
+            <div style="display:none;">
+                <h2>Objectives</h2>
+                <textarea id="objectives" class="notes" style="margin-top: 0;"></textarea>
+                <h2>Languages</h2>
+                <textarea id="languages" class="notes" style="margin-top: 0;"></textarea>
+                <h2>Keywords</h2>
+                <textarea id="keywords" class="notes" style="margin-top: 0;"></textarea>
+                <h2>Background</h2>
+                <textarea id="background" class="notes" style="margin-top: 0;"></textarea>
+                <h2>Notes</h2>
+                <textarea id="notes" class="notes" style="margin-top: 0;"></textarea>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content-row" style="margin-bottom: 0">
+        <span style="flex-grow: 1"></span>
+        <button id="clear-storage" class="" style="margin: 3em 0 0 0" onclick="clearSheet()" disabled>Character Sheet
+            Empty</button>
+    </div>
+
+</body>
+
+</html>
